@@ -1,38 +1,100 @@
 .App {
-  text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--very-dark-navy-blue);
+    max-width: 1015px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App-left {
+    width: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App-right {
+    width: 50%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.top {
+    margin-bottom: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item .label {
+    min-width: 275px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.days-weather {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.days-weather .weather-item {
+    padding: 1rem;
+    background-color: var(--midnight-slate);
+    border-radius: 10px;
+}
+
+.weather-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.weather-item.active {
+    background-color: var(--white);
+    color: black;
+}
+
+.weather-item div {
+    padding: 1rem 1.2rem;
+}
+
+.weather-item div:last-child {
+    font-weight: 600;
+}
+
+.weather-item .weather-icon {
+    max-width: 54px;
+}
+
+.weather-item .weather-day {
+    font-size: 20px;
+}
+
+.weather-item .weather-temperature {
+    font-size: 20px;
+}
+
+.change-location button {
+    padding: 1rem 0;
+    min-width: 400px;
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: var(--white);
+    border: 0;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #5460e6;
+    color: white;
+    cursor: pointer;
+}
+
+.icon-before::before {
+    content: url("assets/images/icons/location-pin.svg");
+    margin-right: 1rem;
+    vertical-align: middle;
 }
